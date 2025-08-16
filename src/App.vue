@@ -16,7 +16,7 @@ function test() {
       v-bind:headerBodyTexts="['Software Engineer', '|', 'Unversity Lecturer', '|', 'Gym Enthusiast']"
       v-bind:headerButtonText="'Get in Touch'" :onButtonClick="test" />
     <ButtonComponent text="Test" link="mailto:ebucelik1@hotmail.com" />
-    <ButtonComponent text="Test leer" link="" />
+    <ButtonComponent text="Test leer" link="" class="text-white" />
     <ButtonComponent text="Test Null" v-on:click="test" />
     <FooterComponent />
   </div>
