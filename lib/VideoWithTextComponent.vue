@@ -3,7 +3,10 @@ import { ref, onMounted } from 'vue';
 import ButtonComponent from './ButtonComponent.vue';
 
 const props = defineProps({
-    videoUrl: String
+    videoUrl: String,
+    headerTitleTexts: Array,
+    headerBodyTexts: Array,
+    headerButtonText: String
 })
 
 const loadedVideo = ref("")
@@ -33,37 +36,16 @@ onMounted(() => {
             class="absolute inset-y-0 w-full flex flex-col place-items-start justify-center transition delay-100 duration-500 ease-in-out px-5 lg:px-10 text-white"
             style="top: 50%; left: 50%; transform: translate(-50%, -50%);">
             <div class="flex-row text-start font-bold w-full fade-up-1s">
-                <h1>
-                    HEY,
-                </h1>
-                <h1>
-                    THIS
-                </h1>
-                <h1>
-                    IS
-                </h1>
-                <h1>
-                    EBU.
+                <h1 v-for="headerTitleText in props.headerTitleTexts">
+                    {{ headerTitleText }}
                 </h1>
             </div>
             <div class="flex gap-1 sm:gap-5 my-10 sm:my-20 fade-up-2s">
-                <p class="flex-col sm:text-2xl">
-                    Software Engineer
-                </p>
-                <p class="sm:text-2xl">
-                    |
-                </p>
-                <p class="flex-col sm:text-2xl">
-                    University Lecturer
-                </p>
-                <p class="sm:text-2xl">
-                    |
-                </p>
-                <p class="flex-col sm:text-2xl">
-                    Gym Enthusiast
+                <p v-for="headerBodyText in headerBodyTexts" class="sm:text-2xl">
+                    {{ headerBodyText }}
                 </p>
             </div>
-            <ButtonComponent text="Get in Touch" class="text-white" />
+            <ButtonComponent :text="props.headerButtonText" class="text-white" />
         </div>
     </div>
 </template>
