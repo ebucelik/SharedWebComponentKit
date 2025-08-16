@@ -59,17 +59,15 @@ jobs:
           git config user.email "github-actions@github.com"
           git add package.json package-lock.json
           git commit -m "Update package.json to version $RELEASE_VERSION"
-          git push origin ${{ github.event.repository.default_branch }}
+          git push origin ${{ github.event.repository.main }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      
 
       # Step7: Create release tag
       - name: Create release
         env:
             GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-            tag: ${{ github.ref_name }}
+            tag: $RELEASE_VERSION
         run: |
             gh release create "$tag" \
                 --repo="$GITHUB_REPOSITORY" \
