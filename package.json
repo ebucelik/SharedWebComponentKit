@@ -1,0 +1,38 @@
+{
+  "name": "sharedwebcomponentkit",
+  "version": "1.0.39",
+  "type": "module",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/sharedwebcomponentkit.umd.cjs",
+  "module": "./dist/sharedwebcomponentkit.js",
+  "types": "./dist/main.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/sharedwebcomponentkit.js",
+      "require": "./dist/sharedwebcomponentkit.umd.js"
+    },
+    "./dist/style.css": "./dist/style.css"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc -b && vite build && npx @tailwindcss/cli -i ./src/style.css -o ./dist/style.css --minify",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@tailwindcss/cli": "^4.1.11",
+    "@tailwindcss/vite": "^4.1.11",
+    "tailwindcss": "^4.1.11",
+    "unplugin-dts": "^1.0.0-beta.0",
+    "vue": "^3.5.18"
+  },
+  "devDependencies": {
+    "@types/node": "^24.2.1",
+    "@vitejs/plugin-vue": "^6.0.1",
+    "@vue/tsconfig": "^0.7.0",
+    "typescript": "~5.8.3",
+    "vite": "^7.1.2",
+    "vue-tsc": "^3.0.5"
+  }
+}
