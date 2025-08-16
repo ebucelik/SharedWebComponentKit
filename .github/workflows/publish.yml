@@ -2,8 +2,8 @@ name: Publish Package to npm
 
 # Trigger this workflow whenever a new release is published
 on:
-  release:
-    types: [published]
+  push:
+    branches: 'main'
 
 # Grant write permissions to the repository contents so we can push version updates
 permissions:
