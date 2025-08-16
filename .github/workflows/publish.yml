@@ -45,16 +45,16 @@ jobs:
       # This step keeps package.json's version aligned with the release tag you just created.
       - name: Update package.json with release tag
         run: |
-          TAG="${{ github.event.release.tag_name }}"
+          TAG=$(npm info sharedwebcomponentkit version)
           echo "Updating package.json version to $TAG"
-          npm version "$TAG" --no-git-tag-version
+          npm "$TAG" --no-git-tag-version version patch
           
       # Step 6: Commit and push the updated package.json and package-lock.json back to the repo
       # This ensures your repository always reflects the exact version published.
       # We use the GITHUB_TOKEN to authenticate and the granted write permissions to push changes.
       - name: Commit and push version update
         run: |
-          TAG="${{ github.event.release.tag_name }}"
+          TAG=$(npm info sharedwebcomponentkit version)
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
           git add package.json package-lock.json
