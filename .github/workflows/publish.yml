@@ -39,14 +39,16 @@ jobs:
       # - name: Run tests
         # run: npm test
 
+      - name: Set env variable
+        run: echo "RELEASE_VERSION=$(npm --no-git-tag-version version patch)" >> $GITHUB_ENV
+
       # Step 5: Update package.json to match the release tag
       # The release tag (e.g., v1.0.1) is extracted, and npm version sets package.json version accordingly.
       # The --no-git-tag-version flag ensures npm doesn't create its own tags.
       # This step keeps package.json's version aligned with the release tag you just created.
       - name: Update package.json with release tag
         run: |
-          TAG=$(npm --no-git-tag-version version patch)
-          echo "Updating package.json version to $TAG"
+          echo "Updating package.json version to $RELEASE_VERSION"
           
       # Step 6: Commit and push the updated package.json and package-lock.json back to the repo
       # This ensures your repository always reflects the exact version published.
@@ -56,7 +58,7 @@ jobs:
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
           git add package.json package-lock.json
-          git commit -m "Update package.json to version $TAG"
+          git commit -m "Update package.json to version $RELEASE_VERSION"
           git push origin ${{ github.event.repository.default_branch }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
