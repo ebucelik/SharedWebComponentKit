@@ -45,9 +45,8 @@ jobs:
       # This step keeps package.json's version aligned with the release tag you just created.
       - name: Update package.json with release tag
         run: |
-          TAG=$(npm info sharedwebcomponentkit version)
+          TAG=$(npm --no-git-tag-version version patch)
           echo "Updating package.json version to $TAG"
-          npm "$TAG" --no-git-tag-version version patch
           
       # Step 6: Commit and push the updated package.json and package-lock.json back to the repo
       # This ensures your repository always reflects the exact version published.
