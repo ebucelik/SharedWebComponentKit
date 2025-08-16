@@ -2,7 +2,7 @@
     <div class="w-full">
         <hr class="mt-10" />
         <div class="mb-20">
-            <div class="grid grid-cols-2 gap-2 p-5 mb-20">
+            <div class="grid grid-cols-2 gap-2 py-5 sm:p-5 mb-20">
                 <div>
                     <h4>
                         CONTACT

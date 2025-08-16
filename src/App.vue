@@ -18,7 +18,7 @@ function test() {
     <ButtonComponent text="Test" link="mailto:ebucelik1@hotmail.com" />
     <ButtonComponent text="Test leer" link="" class="text-white" />
     <ButtonComponent text="Test Null" v-on:click="test" />
-    <FooterComponent />
+    <FooterComponent class="mx-auto px-5 lg:px-10" />
   </div>
 </template>
 
