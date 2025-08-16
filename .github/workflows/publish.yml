@@ -53,7 +53,6 @@ jobs:
       # We use the GITHUB_TOKEN to authenticate and the granted write permissions to push changes.
       - name: Commit and push version update
         run: |
-          TAG=$(npm info sharedwebcomponentkit version)
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
           git add package.json package-lock.json
