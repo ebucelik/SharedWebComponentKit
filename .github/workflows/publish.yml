@@ -63,11 +63,15 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
+      - name: get-npm-version
+        id: package-version
+        uses: martinbeentjes/npm-get-version-action@v1.3.1
+
       # Step7: Create release tag
       - name: Create release
         env:
             GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-            tag: echo $RELEASE_VERSION
+            tag: ${{ steps.package-version.outputs.current-version}}
         run: |
             gh release create "$tag" \
                 --repo="$GITHUB_REPOSITORY" \
