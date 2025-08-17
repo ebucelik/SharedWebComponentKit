@@ -27,8 +27,8 @@ onMounted(() => {
 
 <template>
     <div class="relative text-center overflow-hidden">
-        <video class="-z-10 rounded-b-4xl overflow-hidden object-cover h-200 sm:h-screen w-full" autoplay loop muted
-            playsinline>
+        <video preload="metadata" class="-z-10 rounded-b-4xl overflow-hidden object-cover h-200 sm:h-screen w-full"
+            autoplay loop muted playsinline>
             <source v-if="loadedVideo" :src="loadedVideo" type="video/mp4" />
         </video>
 
