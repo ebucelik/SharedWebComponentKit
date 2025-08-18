@@ -22,15 +22,15 @@ const props = defineProps({
                         <h5 class="mb-1">
                             {{ timeline.startEndDate }}
                         </h5>
-                        <p class="font-bold">
+                        <h4 class="font-bold">
                             {{ timeline.position }}
-                        </p>
-                        <p class="font-bold text-blue-dark mb-5">
+                        </h4>
+                        <h4 class="font-bold text-blue-dark mb-5">
                             {{ timeline.organization }}
-                        </p>
-                        <p class="text-gray-500 pe-10">
+                        </h4>
+                        <h4 class="text-gray-500 pe-10">
                             {{ timeline.description }}
-                        </p>
+                        </h4>
                     </div>
                 </div>
             </li>
