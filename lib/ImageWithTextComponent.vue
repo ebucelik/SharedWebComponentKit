@@ -28,7 +28,8 @@ onMounted(() => {
 <template>
     <div class="relative text-center overflow-hidden">
         <img v-if="loadedImage" :src="loadedImage"
-            class="-z-10 rounded-b-4xl overflow-hidden object-cover h-200 sm:h-screen w-full" />
+            class="-z-10 rounded-b-4xl overflow-hidden object-cover h-200 sm:h-screen w-full"
+            alt="Random generated image." />
 
         <div :class="translateHeadText"
             class="absolute inset-y-0 w-full flex flex-col place-items-start justify-center transition delay-100 duration-500 ease-in-out px-5 lg:px-10 text-white"
