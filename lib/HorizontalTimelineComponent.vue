@@ -28,7 +28,7 @@ const props = defineProps({
                         <p class="font-bold text-blue-dark mb-5">
                             {{ timeline.organization }}
                         </p>
-                        <p class="text-gray-500">
+                        <p class="text-gray-500 pe-10">
                             {{ timeline.description }}
                         </p>
                     </div>

@@ -22,6 +22,12 @@ const timelines = [
     organization: "Marzek",
     position: "iOS Software Engineer & Backend Developer",
     description: "Responsible for the development of eCommerce iOS white-label applications for Billa Austria and Czech Republic, utilizing cutting-edge iOS technologies such as SwiftUI, UIKit, Async/Await, and TCA. Co-developed the gateway using Kotlin, Spring Boot, Spring Security, and Spring Data, while also designing API drafts to provide efficient interfaces for Android and iOS clients."
+  },
+  {
+    startEndDate: "June 2019 - June 2021",
+    organization: "Marzek",
+    position: "iOS Software Engineer & Backend Developer",
+    description: "Responsible for the development of eCommerce iOS white-label applications for Billa Austria and Czech Republic, utilizing cutting-edge iOS technologies such as SwiftUI, UIKit, Async/Await, and TCA. Co-developed the gateway using Kotlin, Spring Boot, Spring Security, and Spring Data, while also designing API drafts to provide efficient interfaces for Android and iOS clients."
   }
 ]
 
