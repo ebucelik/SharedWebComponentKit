@@ -10,7 +10,7 @@ const props = defineProps({
 <template>
     <div>
         <ol class="items-center hidden sm:flex">
-            <li v-for="timeline in props.timelines" class="mb-6 sm:mb-0 me-10">
+            <li v-for="timeline in props.timelines" class="mb-6 sm:mb-0">
                 <div class="flex items-center">
                     <div
                         class="z-10 flex items-center justify-center w-5 h-5 mx-1 bg-blue-dark border border-1-black rounded-full">
