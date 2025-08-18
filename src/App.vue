@@ -3,8 +3,8 @@ import HeaderButtonComponent from '../lib/HeaderButtonComponent.vue'
 import VideoWithTextComponent from '../lib/VideoWithTextComponent.vue'
 import FooterComponent from '../lib/FooterComponent.vue'
 import ButtonComponent from '../lib/ButtonComponent.vue'
-import TimelineComponent from '../lib/TimelineComponent.vue'
-import { TimelineComponentItem } from '../lib/TimelineComponentItem.vue'
+import VerticalTimelineComponent from '../lib/VerticalTimelineComponent.vue'
+import HorizontalTimelineComponent from '../lib/HorizontalTimelineComponent.vue'
 
 function test() {
   console.log("TEST")
@@ -37,6 +37,7 @@ const timelines = [
     <ButtonComponent text="Test Null" v-on:click="test" />
     <FooterComponent class="mx-auto px-5 lg:px-10" /> -->
 
-    <TimelineComponent v-bind:timelines="timelines" />
+    <VerticalTimelineComponent v-bind:timelines="timelines" />
+    <HorizontalTimelineComponent v-bind:timelines="timelines" />
   </div>
 </template>

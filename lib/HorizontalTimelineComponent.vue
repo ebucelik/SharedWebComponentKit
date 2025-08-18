@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { onMounted, ref } from 'vue';
 import { TimelineComponentItem } from './TimelineComponentItem.vue';
+import VerticalTimelineComponent from './VerticalTimelineComponent.vue';
 
 const props = defineProps({
     timelines: Array<TimelineComponentItem>
@@ -8,12 +8,16 @@ const props = defineProps({
 </script>
 
 <template>
-    <div class="sm:grid sm:grid-cols-3">
-        <ol class="relative col-start-2 border-s border-black dark:border-gray-700">
-            <li v-for="timeline in props.timelines" class="mb-10 ms-5">
-                <div class="absolute w-5 h-5 bg-blue-dark border border-1-black rounded-full -start-2.5"></div>
-
-                <div class="grid grid-cols-1 gap-5 mb-30">
+    <div>
+        <ol class="items-center hidden sm:flex">
+            <li v-for="timeline in props.timelines" class="mb-6 sm:mb-0">
+                <div class="flex items-center">
+                    <div
+                        class="z-10 flex items-center justify-center w-5 h-5 mx-1 bg-blue-dark border border-1-black rounded-full">
+                    </div>
+                    <div class="sm:flex w-full h-0.5 bg-black/40"></div>
+                </div>
+                <div class="grid grid-cols-1 gap-5 mt-1.5 mb-30">
                     <div>
                         <h5 class="mb-1">
                             {{ timeline.startEndDate }}
@@ -31,5 +35,7 @@ const props = defineProps({
                 </div>
             </li>
         </ol>
+
+        <VerticalTimelineComponent v-bind:timelines="timelines" class="sm:hidden" />
     </div>
 </template>

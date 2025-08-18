@@ -3,7 +3,8 @@ import ButtonComponent from './ButtonComponent.vue'
 import VideoWithTextComponent from './VideoWithTextComponent.vue'
 import ImageWithTextComponent from './ImageWithTextComponent.vue'
 import FooterComponent from './FooterComponent.vue'
-import TimelineComponent from './TimelineComponent.vue'
+import VerticalTimelineComponent from './VerticalTimelineComponent.vue'
+import HorizontalTimelineComponent from './HorizontalTimelineComponent.vue'
 import { TimelineComponentItem } from './TimelineComponentItem.vue'
 
 export {
@@ -12,6 +13,7 @@ export {
     VideoWithTextComponent,
     ImageWithTextComponent,
     FooterComponent,
-    TimelineComponent
+    VerticalTimelineComponent,
+    HorizontalTimelineComponent
 }
 export type { TimelineComponentItem }
