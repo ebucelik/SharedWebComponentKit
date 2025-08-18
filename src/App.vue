@@ -28,7 +28,7 @@ const timelines = [
 </script>
 
 <template>
-  <div>
+  <div class="bg-white">
     <!-- <VideoWithTextComponent videoName="Test Button" v-bind:headerTitleTexts="['HEY,', 'THIS', 'IS', 'EBU']"
       v-bind:headerBodyTexts="['Software Engineer', '|', 'Unversity Lecturer', '|', 'Gym Enthusiast']"
       v-bind:headerButtonText="'Get in Touch'" :onButtonClick="test" />
@@ -40,9 +40,3 @@ const timelines = [
     <TimelineComponent v-bind:timelines="timelines" />
   </div>
 </template>
-
-<style>
-html {
-  background-color: white;
-}
-</style>
