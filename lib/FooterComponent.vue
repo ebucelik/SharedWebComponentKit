@@ -10,7 +10,7 @@
                     <p>
                         Ing. Ebu Bekir Celik, BSc, MSc
                     </p>
-                    <p>
+                    <p class="py-2">
                         <a href="mailto:ebucelik1@hotmail.com"
                             class="text-gray-600 hover:text-blue-dark no-underline">ebucelik1@hotmail.com</a>
                     </p>
@@ -23,13 +23,13 @@
                     <h4>
                         SOCIAL MEDIA
                     </h4>
-                    <div class="flex">
+                    <div class="flex py-2">
                         <a href="https://www.instagram.com/ebu.celik" target="_blank">
                             <img src="./assets/mdi--instagram.svg" class="w-5 h-5 sm:w-10 sm:h-10"
                                 alt="Logo for Instagram page." />
                         </a>
                         <a href="https://www.linkedin.com/in/ebu-bekir-çelik-923221207" target="_blank">
-                            <img src="./assets/mdi--linkedin.svg" class="w-5 h-5 sm:w-10 sm:h-10 ms-5"
+                            <img src="./assets/mdi--linkedin.svg" class="w-5 h-5 sm:w-10 sm:h-10 ms-4 sm:ms-10"
                                 alt="Logo for LinkedIn page." />
                         </a>
                     </div>

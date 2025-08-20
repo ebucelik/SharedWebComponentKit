@@ -43,6 +43,7 @@ const timelines = [
     <ButtonComponent text="Test Null" v-on:click="test" />
     <FooterComponent class="mx-auto px-5 lg:px-10" /> -->
 
+    <FooterComponent class="mx-auto px-5 lg:px-10" />
     <VerticalTimelineComponent v-bind:timelines="timelines" />
     <HorizontalTimelineComponent v-bind:timelines="timelines" />
   </div>
